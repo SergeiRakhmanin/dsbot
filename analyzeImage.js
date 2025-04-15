@@ -40,4 +40,4 @@ async function generateText(imageUrl) {
 }
 
 
-module.exports = { generateCaption };
+module.exports = { generateText };

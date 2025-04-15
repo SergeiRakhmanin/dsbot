@@ -1,4 +1,4 @@
-const { generateCaption } = require('./analyzeImage');
+const { generateText } = require('./analyzeImage');
 
 client.on('messageCreate', async (message) => {
     if (message.author.bot) return;
@@ -7,7 +7,7 @@ client.on('messageCreate', async (message) => {
     if (attachment && attachment.contentType.startsWith('image/')) {
       await message.channel.send('Думаю над ответом...');
   
-      const reply = await generateCaption(attachment.url);
+      const reply = await generateText(attachment.url);
       await message.reply(reply);
     }
   });
